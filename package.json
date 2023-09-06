@@ -4,16 +4,14 @@
   "homepage": "https://thajj.github.io/",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.41",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
+    "framer-motion": "^10.16.1",
+    "i18next-browser-languagedetector": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^2.1.3",
+    "react-i18next": "^13.2.0",
+    "react-icons": "^4.10.1",
+    "react-scripts": "^5.0.1",
+    "react-super-seo": "^1.1.3",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -23,13 +21,11 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider  build",
     "test": "react-scripts --openssl-legacy-provider test",
-    "eject": "react-scripts --openssl-legacy-provider eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts --openssl-legacy-provider eject",
+    "i18next-resources-for-ts": "i18next-resources-for-ts toc -i ./src/i18n/en -o ./src/@types/resources.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint -c .eslintrc.js --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "browserslist": {
     "production": [
@@ -44,6 +40,20 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0"
+    "@emotion/react": "^11.11.1",
+    "@mantine/core": "^6.0.19",
+    "@mantine/hooks": "^6.0.19",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.41",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "gh-pages": "^6.0.0",
+    "i18next-resources-for-ts": "^1.3.0",
+    "typescript": "^4.9.5"
   }
 }
